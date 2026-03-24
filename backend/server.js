@@ -9,6 +9,7 @@ const queueRoutes = require('./routes/queue');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+console.log("PORT VALUE:", process.env.PORT);
 
 // ─── Security Middleware ─────────────────────────────────────────────
 app.use(helmet());
