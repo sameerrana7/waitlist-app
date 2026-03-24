@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 console.log("PORT VALUE:", process.env.PORT);
 
 // ─── Security Middleware ─────────────────────────────────────────────
-app.use(helmet());
+// app.use(helmet());
 
 app.use(cors({
   origin: [
