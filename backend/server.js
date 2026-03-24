@@ -8,7 +8,7 @@ const authRoutes = require('./routes/auth');
 const queueRoutes = require('./routes/queue');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 console.log("PORT VALUE:", process.env.PORT);
 
 // ─── Security Middleware ─────────────────────────────────────────────
