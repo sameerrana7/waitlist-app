@@ -21,8 +21,3 @@ app.get('/api/health', (req, res) => {
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
-```
-
-Commit → wait for Railway to redeploy → try:
-```
-https://waitlist-app-production.up.railway.app/api/health
