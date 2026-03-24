@@ -4,8 +4,8 @@ const cors = require('cors');
 const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 
-// const authRoutes = require('./routes/auth');
-// const queueRoutes = require('./routes/queue');
+const authRoutes = require('./routes/auth');
+const queueRoutes = require('./routes/queue');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -42,8 +42,8 @@ app.use('/api/', globalLimiter);
 app.use('/api/queue/join', joinLimiter);
 
 // ─── Routes ─────────────────────────────────────────────────────────
-// app.use('/api/auth', authRoutes);
-// app.use('/api/queue', queueRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/queue', queueRoutes);
 
 // ─── Health Check ────────────────────────────────────────────────────
 app.get('/api/health', (req, res) => {
