@@ -66,11 +66,16 @@ app.use((err, req, res, next) => {
   res.status(500).json({ success: false, message: 'Internal server error' });
 });
 
-// ─── Start Server ────────────────────────────────────────────────────
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`\n🚀 Server running on port ${PORT}`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
   console.log(`📡 API: http://localhost:${PORT}/api\n`);
 });
+// // ─── Start Server ────────────────────────────────────────────────────
+// app.listen(PORT, () => {
+//   console.log(`\n🚀 Server running on port ${PORT}`);
+//   console.log(`🌍 Environment: ${process.env.NODE_ENV}`);
+//   console.log(`📡 API: http://localhost:${PORT}/api\n`);
+// });
 
 module.exports = app;
